@@ -1,19 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-#right-side {
+.rightSide {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 50%;
 }
 
-.animation-container{
+.animationContainer{
   display: flex;
   width: 100%;
 }
 
-.animated-img {
+.animatedImg {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 100%;
@@ -27,7 +23,7 @@
   to {flex-basis: 50%;}
 }
 
-.tabs-list {
+.tabsList {
   opacity: 0;
   animation-name: show-tabs-list;
   animation-delay: 2.5s;
@@ -43,7 +39,7 @@
   }
 }
 
-.animated-title {
+.animatedTitle {
   opacity: 0;
   animation-name: show-title;
   animation-delay: 2s;

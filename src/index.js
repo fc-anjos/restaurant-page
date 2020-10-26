@@ -1,11 +1,11 @@
-import styles from './main.css';
+import styles from './main.module.css';
 import backgroundImage from './background.jpg';
 
 function appendImageDiv() {
   const content = document.getElementById('content');
-  content.classList.add(styles.'animation-container');
+  content.classList.add(styles.animationContainer);
   const imageDiv = document.createElement('div'); // Create a <li> node
-  imageDiv.classList.add('animated-img');
+  imageDiv.classList.add(styles.animatedImg);
   imageDiv.style.height = '100vh';
   imageDiv.style.backgroundImage = `url(${backgroundImage})`;
   imageDiv.style.backgroundSize = 'cover';
@@ -15,9 +15,9 @@ function appendImageDiv() {
 
 function createTitle(container) {
   const title = document.createElement('h1');
-  title.classList.add('animated-title', 'text-3xl', 'my-2');
+  title.classList.add(styles.animatedTitle);
   title.innerHTML = 'Commissary';
-  title.classList.add('text-center');
+  title.classList.add(styles.textCenter);
   container.appendChild(title);
   return container;
 }
@@ -25,7 +25,7 @@ function createTitle(container) {
 function createRightSide() {
   let rightSide = document.createElement('div');
   rightSide.id = 'right-side';
-  rightSide.classList.add('right-side');
+  rightSide.classList.add(styles.rightSide);
   rightSide = createTitle(rightSide);
   return rightSide;
 }
@@ -33,7 +33,7 @@ function createRightSide() {
 function createTabsList(tabs) {
   const rightSide = createRightSide();
   const tabsList = document.createElement('ul');
-  tabsList.classList.add('tabs-list');
+  tabsList.classList.add(styles.tabsList);
   tabs.forEach(tab => {
     tabsList.appendChild(tab);
   });

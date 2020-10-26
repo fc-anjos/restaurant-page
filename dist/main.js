@@ -1,18 +1,1 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is not neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-/******/ (() => { // webpackBootstrap
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! namespace exports */
-/*! exports [not provided] [no usage info] */
-/*! runtime requirements:  */
-eval("throw new Error(\"Module parse failed: Unexpected token (6:31)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n| function appendImageDiv() {\\n|   const content = document.getElementById('content');\\n>   content.classList.add(styles.'animation-container');\\n|   const imageDiv = document.createElement('div'); // Create a <li> node\\n|   imageDiv.classList.add('animated-img');\");\n\n//# sourceURL=webpack://webpack-tailwind/./src/index.js?");
-/******/ })()
-;
+(()=>{"use strict";var t={};t.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(t){if("object"==typeof window)return window}}(),(()=>{var e;t.g.importScripts&&(e=t.g.location+"");var n=t.g.document;if(!e&&n&&(n.currentScript&&(e=n.currentScript.src),!e)){var i=n.getElementsByTagName("script");i.length&&(e=i[i.length-1].src)}if(!e)throw new Error("Automatic publicPath is not supported in this browser");e=e.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),t.p=e})();const e={rightSide:"_36tsDakbI-e5j0HYS3hUF1",animationContainer:"_3KwQtx4X1-A9yX0RkwZLvB",animatedImg:"_35Vhz1U6SoIt7QsjK0eZ6B","slide-image":"_3unguKx0zEEDaJYz9il231",tabsList:"JflXTlcK9CrRkX8Vmt2ZC","show-tabs-list":"_1fsLT329GGUBAOeZGnTiW_",animatedTitle:"ygEkcKuqoMciBfXMlaknu","show-title":"_32HwODEECjhDzfS4U3unvW"},n=t.p+"background.1NexPYb8.jpg";function i(t){const e=document.createElement("div"),n=document.createElement("h1");return e.appendChild(n),n.innerHTML=t,e.innerHTML}function c(t,e){const n=document.createElement("li"),i=document.createElement("btn");return n.appendChild(i),i.innerHTML=t,i.addEventListener("click",(()=>{var t;t=e,document.getElementById("section").innerHTML=t})),i}const a=i("About"),o=i("Menu"),r=i("Contact"),d=c("About",a),s=c("Menu",o),l=c("Contact",r);window.addEventListener("DOMContentLoaded",(t=>{!function(){const t=document.getElementById("content");t.classList.add(e.animationContainer);const i=document.createElement("div");i.classList.add(e.animatedImg),i.style.height="100vh",i.style.backgroundImage=`url(${n})`,i.style.backgroundSize="cover",i.style.backgroundPosition="50% 50%",t.appendChild(i)}(),function(t){const n=function(){let t=document.createElement("div");return t.id="right-side",t.classList.add(e.rightSide),t=function(t){const n=document.createElement("h1");return n.classList.add(e.animatedTitle),n.innerHTML="Commissary",n.classList.add(e.textCenter),t.appendChild(n),t}(t),t}(),i=document.createElement("ul");i.classList.add(e.tabsList),t.forEach((t=>{i.appendChild(t)})),n.appendChild(i);const c=document.getElementById("content"),a=document.createElement("section");a.id="section",n.appendChild(a),c.appendChild(n)}([d,s,l]),i("About")}))})();
