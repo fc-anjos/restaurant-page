@@ -1,74 +1,9 @@
-import styles from './main.module.css';
-import backgroundImage from './background.jpg';
+import {
+  drawMain, createTabsList, createTab, addSectionContent,
+} from './main';
 
-function appendImageDiv() {
-  const content = document.getElementById('content');
-  content.classList.add(styles.animationContainer);
-  const imageDiv = document.createElement('div'); // Create a <li> node
-  imageDiv.classList.add(styles.animatedImg);
-  imageDiv.style.height = '100vh';
-  imageDiv.style.backgroundImage = `url(${backgroundImage})`;
-  imageDiv.style.backgroundSize = 'cover';
-  imageDiv.style.backgroundPosition = '50% 50%';
-  content.appendChild(imageDiv);
-}
 
-function createTitle(container) {
-  const title = document.createElement('h1');
-  title.classList.add(styles.animatedTitle);
-  title.innerHTML = 'Commissary';
-  title.classList.add(styles.textCenter);
-  container.appendChild(title);
-  return container;
-}
-
-function createRightSide() {
-  let rightSide = document.createElement('div');
-  rightSide.id = 'right-side';
-  rightSide.classList.add(styles.rightSide);
-  rightSide = createTitle(rightSide);
-  return rightSide;
-}
-
-function createTabsList(tabs) {
-  const rightSide = createRightSide();
-  const tabsList = document.createElement('ul');
-  tabsList.classList.add(styles.tabsList);
-  tabs.forEach(tab => {
-    tabsList.appendChild(tab);
-  });
-  rightSide.appendChild(tabsList);
-  const content = document.getElementById('content');
-  const section = document.createElement('section');
-  section.id = 'section';
-  rightSide.appendChild(section);
-  content.appendChild(rightSide);
-}
-
-function changeSectionInnerHtml(element) {
-  const section = document.getElementById('section');
-  section.innerHTML = element;
-}
-
-function addSectionContent(id) {
-  const sectionContent = document.createElement('div');
-  const title = document.createElement('h1');
-  sectionContent.appendChild(title);
-  title.innerHTML = id;
-  return sectionContent.innerHTML;
-}
-
-function createTab(content, sectionContent) {
-  const tab = document.createElement('li');
-  const btn = document.createElement('btn');
-  tab.appendChild(btn);
-  btn.innerHTML = content;
-  btn.addEventListener('click', () => {
-    changeSectionInnerHtml(sectionContent);
-  });
-  return btn;
-}
-
+// TODO: Replace addSectionContent with specific content
 const aboutContent = addSectionContent('About');
 const menuContent = addSectionContent('Menu');
 const contactContent = addSectionContent('Contact');
@@ -77,8 +12,7 @@ const about = createTab('About', aboutContent);
 const menu = createTab('Menu', menuContent);
 const contact = createTab('Contact', contactContent);
 
-window.addEventListener('DOMContentLoaded', event => {
-  appendImageDiv();
+window.addEventListener('DOMContentLoaded', () => {
+  drawMain();
   createTabsList([about, menu, contact]);
-  addSectionContent('About');
 });
