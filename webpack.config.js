@@ -1,8 +1,9 @@
 const path = require('path');
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   mode: 'development',
-  watch: true,
   module: {
     rules: [
       {
@@ -21,8 +22,8 @@ module.exports = {
               postcssOptions: {
                 ident: 'postcss',
                 plugins: [
-                  require('tailwindcss'),
-                  require('autoprefixer'),
+                  tailwindcss,
+                  autoprefixer,
                 ],
 
               },

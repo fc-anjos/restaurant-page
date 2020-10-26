@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#right-side {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50%;
+}
+
+.animation-container{
+  display: flex;
+  width: 100%;
+}
+
+.animated-img {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  animation-name: slide-image;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-image{
+  to {flex-basis: 50%;}
+}
+
+.tabs-list {
+  opacity: 0;
+  animation-name: show-tabs-list;
+  animation-delay: 2.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  display: flex;
+  justify-content: space-around;
+}
+
+@keyframes show-tabs-list{
+  to {
+    opacity: 100%;
+  }
+}
+
+.animated-title {
+  opacity: 0;
+  animation-name: show-title;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-title{
+  to {
+    opacity: 100%;
+  }
+}
