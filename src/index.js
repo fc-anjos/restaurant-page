@@ -1,3 +1,4 @@
+import './main.css';
 import backgroundImage from './background.jpg';
 
 function appendImageDiv() {
