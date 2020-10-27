@@ -40,6 +40,7 @@ const MenuItemTag = menuItem => {
       <h4>
         ${item}
       </h4>
+      <div class="${styles.conectingLine}"></div>
       <span class="${styles.price}">
         ${price}$
       </span>

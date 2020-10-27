@@ -17,10 +17,19 @@
   justify-content: space-between;
 }
 
+.conectingLine{
+  flex-grow: 1;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0.55em;
+  padding: 0 1em 0 1em;
+}
+
 .topLine h4 {
   padding: 0;
   margin: 0;
   font-size: 1.1em;
+  padding-right: 1em;
 }
 
 .menuEntry {
