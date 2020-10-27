@@ -3,7 +3,6 @@ import {
 } from './main';
 
 
-// TODO: Replace addSectionContent with specific content
 const aboutContent = addSectionContent('About');
 const menuContent = addSectionContent('Menu');
 const contactContent = addSectionContent('Contact');

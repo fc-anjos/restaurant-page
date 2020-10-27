@@ -1,9 +1,13 @@
 import styles from './main.module.css';
 import backgroundImage from './background.jpg';
 
-function appendImageDiv() {
+function styleContent() {
   const content = document.getElementById('content');
   content.classList.add(styles.animationContainer);
+}
+
+function appendImageDiv() {
+  const content = document.getElementById('content');
   const imageDiv = document.createElement('div'); // Create a <li> node
   imageDiv.classList.add(styles.animatedImg);
   imageDiv.style.height = '100%';
@@ -11,20 +15,19 @@ function appendImageDiv() {
   content.appendChild(imageDiv);
 }
 
-function createTitle(container) {
+function createTitle() {
   const title = document.createElement('h1');
   title.classList.add(styles.animatedTitle);
   title.innerHTML = 'Commissary';
   title.classList.add(styles.textCenter);
-  container.appendChild(title);
-  return container;
+  return title.outerHTML;
 }
 
 function createRightSide() {
-  let rightSide = document.createElement('div');
+  const rightSide = document.createElement('div');
   rightSide.id = 'right-side';
   rightSide.classList.add(styles.rightSide);
-  rightSide = createTitle(rightSide);
+  rightSide.innerHTML = createTitle();
   return rightSide;
 }
 
@@ -67,8 +70,8 @@ function createTab(content, sectionContent) {
   return tab;
 }
 
-
 const drawMain = () => {
+  styleContent();
   appendImageDiv();
 };
 
