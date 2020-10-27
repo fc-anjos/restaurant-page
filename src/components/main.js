@@ -1,80 +1,54 @@
 import styles from '../styles/main.module.css';
 import backgroundImage from '../assets/background.jpg';
-
-function styleContent() {
-  const content = document.getElementById('content');
-}
+import aboutContent from './about';
 
 function imageDiv() {
-  const imageDiv = document.createElement('div'); // Create a <li> node
+  const imageDiv = document.createElement('div');
   imageDiv.classList.add(styles.animatedImg);
   imageDiv.style.height = '100%';
   imageDiv.style.backgroundImage = `url(${backgroundImage})`;
   return imageDiv.outerHTML;
 }
 
-function createTitle() {
-  const title = document.createElement('h1');
-  title.classList.add(styles.animatedTitle);
-  title.innerHTML = 'Commissary';
-  title.classList.add(styles.textCenter);
-  return title.outerHTML;
+function Tab(content, id) {
+  const tab = document.createElement('li');
+  const btn = document.createElement('button');
+  btn.id = id;
+  btn.innerHTML = content;
+  tab.appendChild(btn);
+  return tab.outerHTML;
 }
 
-function createRightSide() {
-  const rightSide = document.createElement('div');
-  rightSide.id = 'right-side';
-  rightSide.classList.add(styles.rightSide);
-  rightSide.innerHTML = createTitle();
-  return rightSide;
-}
-
-function createTabsList(tabs) {
-  const rightSide = createRightSide();
-  const tabsList = document.createElement('ul');
-  tabsList.classList.add(styles.tabsList);
-  tabs.forEach(tab => {
-    tabsList.appendChild(tab);
-  });
-  rightSide.appendChild(tabsList);
-  const content = document.getElementById('content');
-  const section = document.createElement('section');
-  section.id = 'section';
-  rightSide.appendChild(section);
-  content.appendChild(rightSide);
-}
-
-function addSectionContent(id) {
-  const sectionContent = document.createElement('div');
-  const title = document.createElement('h1');
-  sectionContent.appendChild(title);
-  title.innerHTML = id;
-  return sectionContent.innerHTML;
-}
-
-const rightSide = () => `
-  <div>Rightiside</div>
+const RightSide = () => `
+  <div id="right-side">
+    <h1 class=${styles.animatedTitle}>
+      Commissary
+    </h1>
+    <ul class=${styles.tabsList}>
+      ${Tab('about', 'aboutBtn')}
+      ${Tab('menu', 'menuBtn')}
+      ${Tab('contact', 'contactBtn')}
+    </ul>
+    <section id="about">${aboutContent()}</section>
+  </div>
   `;
 
 
-const leftSide = () => `
+const LeftSide = () => `
   ${imageDiv()}
   `;
-
 
 const drawMain = () => {
   const content = document.getElementById('content');
   content.classList.add(styles.animationContainer);
 
   const main = `
-    ${leftSide()}
-    ${rightSide()}
+    ${LeftSide()}
+    ${RightSide()}
   `;
   // styleContent();
   // appendImageDiv();
   content.innerHTML = main;
 };
 
-export {
-  drawMain, createTabsList, addSectionContent,
-};
+export default drawMain;
