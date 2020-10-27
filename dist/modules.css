@@ -1,20 +1,20 @@
-._36tsDakbI-e5j0HYS3hUF1 {
+._2kAbzSQunnzBWxn0Zp-owt {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 50%;
   padding: 1em;
 }
 
-._3KwQtx4X1-A9yX0RkwZLvB{
+.LPGd6vCJN_fcQA_6Oz1Cq{
   display: flex;
   width: 100%;
 }
 
-._35Vhz1U6SoIt7QsjK0eZ6B {
+._1aAH26TDXn8akfNdSpST_C {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 100%;
-  animation-name: _3unguKx0zEEDaJYz9il231;
+  animation-name: _26rNh2kkGwGDEw1CUxq447;
   animation-delay: 1s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -22,13 +22,13 @@
   background-position: 50% 50%;
 }
 
-@keyframes _3unguKx0zEEDaJYz9il231{
+@keyframes _26rNh2kkGwGDEw1CUxq447{
   to {flex-basis: 50%;}
 }
 
-.JflXTlcK9CrRkX8Vmt2ZC {
+._3lxRP8EC2H-ssEeTyd-39v {
   opacity: 0;
-  animation-name: _1fsLT329GGUBAOeZGnTiW_;
+  animation-name: _2AdUtm_hF9nUda2LFHVeJT;
   animation-delay: 2.5s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -36,21 +36,21 @@
   justify-content: space-around;
 }
 
-@keyframes _1fsLT329GGUBAOeZGnTiW_{
+@keyframes _2AdUtm_hF9nUda2LFHVeJT{
   to {
     opacity: 100%;
   }
 }
 
-.ygEkcKuqoMciBfXMlaknu {
+._1UpaoSxImmfoVeoAGQMLlg {
   opacity: 0;
-  animation-name: _32HwODEECjhDzfS4U3unvW;
+  animation-name: _1B1z6kXOi4XaxROzC8Z6c4;
   animation-delay: 2s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
-@keyframes _32HwODEECjhDzfS4U3unvW{
+@keyframes _1B1z6kXOi4XaxROzC8Z6c4{
   to {
     opacity: 100%;
   }

@@ -1,18 +1,16 @@
-import styles from './main.module.css';
-import backgroundImage from './background.jpg';
+import styles from '../styles/main.module.css';
+import backgroundImage from '../assets/background.jpg';
 
 function styleContent() {
   const content = document.getElementById('content');
-  content.classList.add(styles.animationContainer);
 }
 
-function appendImageDiv() {
-  const content = document.getElementById('content');
+function imageDiv() {
   const imageDiv = document.createElement('div'); // Create a <li> node
   imageDiv.classList.add(styles.animatedImg);
   imageDiv.style.height = '100%';
   imageDiv.style.backgroundImage = `url(${backgroundImage})`;
-  content.appendChild(imageDiv);
+  return imageDiv.outerHTML;
 }
 
 function createTitle() {
@@ -46,11 +44,6 @@ function createTabsList(tabs) {
   content.appendChild(rightSide);
 }
 
-function changeSectionInnerHtml(content) {
-  const section = document.getElementById('section');
-  section.innerHTML = content;
-}
-
 function addSectionContent(id) {
   const sectionContent = document.createElement('div');
   const title = document.createElement('h1');
@@ -59,22 +52,29 @@ function addSectionContent(id) {
   return sectionContent.innerHTML;
 }
 
-function createTab(content, sectionContent) {
-  const tab = document.createElement('li');
-  const btn = document.createElement('button');
-  tab.appendChild(btn);
-  btn.innerHTML = content;
-  btn.addEventListener('click', () => {
-    changeSectionInnerHtml(sectionContent);
-  });
-  return tab;
-}
+const rightSide = () => `
+  <div>Rightiside</div>
+  `;
+
+
+const leftSide = () => `
+  ${imageDiv()}
+  `;
+
 
 const drawMain = () => {
-  styleContent();
-  appendImageDiv();
+  const content = document.getElementById('content');
+  content.classList.add(styles.animationContainer);
+
+  const main = `
+    ${leftSide()}
+    ${rightSide()}
+  `;
+  // styleContent();
+  // appendImageDiv();
+  content.innerHTML = main;
 };
 
 export {
-  drawMain, createTabsList, createTab, addSectionContent,
+  drawMain, createTabsList, addSectionContent,
 };
