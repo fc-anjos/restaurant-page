@@ -1,3 +1,3 @@
-const aboutContent = () => '<h1>Here we go</h1>';
+const aboutContent = () => '<h1>Hello About</h1>';
 
 export default aboutContent;

@@ -1,23 +1,24 @@
 import drawMain from './components/main';
+import AboutContent from './components/about';
+import MenuContent from './components/menu';
+import ContactContent from './components/contact';
 
-// function changeSectionInnerHtml(content) {
-//   const section = document.getElementById('section');
-//   section.innerHTML = content;
-// }
+const changeSectionInnerHtml = content => {
+  const section = document.getElementById('section-container');
+  section.innerHTML = content;
+};
 
-// function createTab(content, sectionContent) {
-//   const tab = document.createElement('li');
-//   const btn = document.createElement('button');
-//   tab.appendChild(btn);
-//   btn.innerHTML = content;
-//   btn.addEventListener('click', () => {
-//     changeSectionInnerHtml(sectionContent);
-//   });
-//   return tab;
-// }
+const addEventListenertoBtn = (targetBtnId, targetContent) => {
+  const btn = document.getElementById(targetBtnId);
+  btn.addEventListener('click', () => {
+    changeSectionInnerHtml(targetContent());
+  });
+};
 
 
 window.addEventListener('DOMContentLoaded', () => {
   drawMain();
-  // createTabsList([about, menu, contact]);
+  addEventListenertoBtn('contactBtn', ContactContent);
+  addEventListenertoBtn('menuBtn', MenuContent);
+  addEventListenertoBtn('aboutBtn', AboutContent);
 });

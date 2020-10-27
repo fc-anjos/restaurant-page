@@ -2,7 +2,6 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = env => {
-  const buildRoot = path.resolve(__dirname, 'dist');
   const srcRoot = path.resolve(__dirname, 'src'); const isDev = env === 'dev';
   const sourceMap = isDev;
   const minimize = !isDev; // we only minimise in production env
@@ -13,11 +12,6 @@ module.exports = env => {
     entry: './src/index.js',
 
     devtool: sourceMap ? 'source-map' : false,
-
-    // Don't bundle any node_modules dependencies.
-    // This leaves the require("foo") statement in,
-    // so your application will bundle dependencies instead.
-    externals: [/^[^.]/],
 
     module: {
       rules: [

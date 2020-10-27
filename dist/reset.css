@@ -11,8 +11,10 @@ body {
 button {
   background-color: inherit;
   border: inherit;
+  padding: 0;
 }
 
 ul {
   list-style-type: none;
+  padding: 0;
 }

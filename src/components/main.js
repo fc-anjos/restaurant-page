@@ -1,42 +1,38 @@
 import styles from '../styles/main.module.css';
-import backgroundImage from '../assets/background.jpg';
-import aboutContent from './about';
+import backgroundImg from '../assets/background.jpg';
 
-function imageDiv() {
-  const imageDiv = document.createElement('div');
-  imageDiv.classList.add(styles.animatedImg);
-  imageDiv.style.height = '100%';
-  imageDiv.style.backgroundImage = `url(${backgroundImage})`;
-  return imageDiv.outerHTML;
-}
+const LeftSide = () => `
+  <div
+  class="${styles.animatedImg}"
+  style="background-image: url(${backgroundImg})"
+  >
+  </div>
+`;
 
-function Tab(content, id) {
-  const tab = document.createElement('li');
-  const btn = document.createElement('button');
-  btn.id = id;
-  btn.innerHTML = content;
-  tab.appendChild(btn);
-  return tab.outerHTML;
-}
+const Tab = props => {
+  const { content, id } = props;
+  return `
+  <li>
+    <button id="${id}">
+      ${content}
+    </button>
+  </li>
+`;
+};
 
 const RightSide = () => `
-  <div id="right-side">
+  <div id="right-side" class="${styles.rightSide}">
     <h1 class=${styles.animatedTitle}>
       Commissary
     </h1>
     <ul class=${styles.tabsList}>
-      ${Tab('about', 'aboutBtn')}
-      ${Tab('menu', 'menuBtn')}
-      ${Tab('contact', 'contactBtn')}
+      ${Tab({ content: 'about', id: 'aboutBtn' })}
+      ${Tab({ content: 'menu', id: 'menuBtn' })}
+      ${Tab({ content: 'contact', id: 'contactBtn' })}
     </ul>
-    <section id="about">${aboutContent()}</section>
+    <div id="section-container"></div>
   </div>
-  `;
-
-
-const LeftSide = () => `
-  ${imageDiv()}
-  `;
+`;
 
 const drawMain = () => {
   const content = document.getElementById('content');
@@ -46,8 +42,6 @@ const drawMain = () => {
     ${LeftSide()}
     ${RightSide()}
   `;
-  // styleContent();
-  // appendImageDiv();
   content.innerHTML = main;
 };
 
