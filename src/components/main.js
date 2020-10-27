@@ -22,14 +22,16 @@ const Tab = props => {
 
 const RightSide = () => `
   <div id="right-side" class="${styles.rightSide}">
-    <h1 class=${styles.animatedTitle}>
-      Commissary
-    </h1>
-    <ul class=${styles.tabsList}>
-      ${Tab({ content: 'about', id: 'aboutBtn' })}
-      ${Tab({ content: 'menu', id: 'menuBtn' })}
-      ${Tab({ content: 'contact', id: 'contactBtn' })}
-    </ul>
+    <div class=${styles.topRow}>
+      <h1 class=${styles.animatedTitle}>
+        Commissary
+      </h1>
+      <ul class=${styles.tabsList}>
+        ${Tab({ content: 'about', id: 'aboutBtn' })}
+        ${Tab({ content: 'menu', id: 'menuBtn' })}
+        ${Tab({ content: 'contact', id: 'contactBtn' })}
+      </ul>
+    </div>
     <div id="section-container"></div>
   </div>
 `;

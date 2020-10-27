@@ -27,6 +27,10 @@
   to {flex-basis: 50%;}
 }
 
+.topRow {
+  display: flex;
+}
+
 .tabsList {
   opacity: 0;
   animation-name: show-tabs-list;
@@ -35,6 +39,11 @@
   animation-fill-mode: forwards;
   display: flex;
   justify-content: space-around;
+  flex-grow: 1;
+}
+
+.tabsList button {
+  font-size: 1.1em;
 }
 
 @keyframes show-tabs-list{
