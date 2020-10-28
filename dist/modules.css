@@ -27,6 +27,10 @@
   to {flex-basis: 50%;}
 }
 
+._2Pz90R_LIxsY6BZKpHiGES {
+  display: flex;
+}
+
 ._3lxRP8EC2H-ssEeTyd-39v {
   opacity: 0;
   animation-name: _2AdUtm_hF9nUda2LFHVeJT;
@@ -35,6 +39,12 @@
   animation-fill-mode: forwards;
   display: flex;
   justify-content: space-around;
+  flex-grow: 1;
+}
+
+._3lxRP8EC2H-ssEeTyd-39v button {
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 @keyframes _2AdUtm_hF9nUda2LFHVeJT{
@@ -55,5 +65,61 @@
   to {
     opacity: 100%;
   }
+}
+
+._1P--AB_FzmKO6v3JGJC6Cn h2 {
+  font-size: 1.7em;
+  margin-bottom: 0.2em;
+  margin-top: 0;
+}
+
+._1P--AB_FzmKO6v3JGJC6Cn h3 {
+  padding: 0;
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
+  margin-top: 0.5em;
+  text-decoration: underline;
+}
+
+._1tq4xbteJU617ycN0G7jap {
+  display: flex;
+  justify-content: space-between;
+}
+
+._2ic8IQeZzHh_ZwsR2BRtxy{
+  flex-grow: 1;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0.55em;
+  padding: 0 1em 0 1em;
+}
+
+._1tq4xbteJU617ycN0G7jap h4 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.1em;
+  padding-right: 1em;
+}
+
+._1qHwzL_V81JMVEkERj64cu {
+  margin-bottom: 1em;
+}
+
+._2r2Aol__QhbAYHx0_IsifS{
+  font-size: 1.1em;
+  padding-left: 1em;
+}
+
+._1RbxEeDImROjRxbFxk0yI5 {
+  display: flex;
+  height: calc(100vh - 8em);
+  overflow-y: scroll;
+  padding-bottom: 1em;
+}
+
+._262oyyvPgyXoE_JRNAeV5h,
+._1setAcPNAOyyiy1oSd5c8G {
+  flex: 50% 0 0;
+  padding-right: 5em;
 }
 

@@ -16,7 +16,6 @@ body {
 
 button {
   cursor: pointer;
-  font-size: 0.8em;
 }
 
 h1,
@@ -31,5 +30,4 @@ h6 {
 #content {
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
 }
