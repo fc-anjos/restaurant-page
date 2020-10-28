@@ -1,10 +1,8 @@
 import styles from '../styles/home.module.css';
-import backgroundImg from '../assets/background.jpg';
 
 const LeftSide = () => `
   <div
   class="${styles.animatedImg}"
-  style="background-image: url(${backgroundImg})"
   >
   </div>
 `;
