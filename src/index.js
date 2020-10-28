@@ -21,4 +21,5 @@ window.addEventListener('DOMContentLoaded', () => {
   addEventListenertoBtn('contactBtn', ContactContent);
   addEventListenertoBtn('menuBtn', MenuContent);
   addEventListenertoBtn('aboutBtn', AboutContent);
+  changeSectionInnerHtml(MenuContent());
 });
