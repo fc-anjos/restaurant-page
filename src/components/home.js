@@ -1,4 +1,4 @@
-import styles from '../styles/main.module.css';
+import styles from '../styles/home.module.css';
 import backgroundImg from '../assets/background.jpg';
 
 const LeftSide = () => `
@@ -36,7 +36,7 @@ const RightSide = () => `
   </div>
 `;
 
-const drawMain = () => {
+const drawHome = () => {
   const content = document.getElementById('content');
   content.classList.add(styles.animationContainer);
 
@@ -47,4 +47,4 @@ const drawMain = () => {
   content.innerHTML = main;
 };
 
-export default drawMain;
+export default drawHome;

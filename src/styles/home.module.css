@@ -20,6 +20,7 @@
   animation-fill-mode: forwards;
   background-size: cover;
   background-position: 50% 50%;
+  background-image: url('../assets/background.jpg');
   height: 100%;
 }
 

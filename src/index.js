@@ -1,4 +1,4 @@
-import drawMain from './components/main';
+import drawHome from './components/home';
 import AboutContent from './components/about';
 import MenuContent from './components/menu';
 import ContactContent from './components/contact';
@@ -17,7 +17,7 @@ const addEventListenertoBtn = (targetBtnId, targetContent) => {
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  drawMain();
+  drawHome();
   addEventListenertoBtn('contactBtn', ContactContent);
   addEventListenertoBtn('menuBtn', MenuContent);
   addEventListenertoBtn('aboutBtn', AboutContent);

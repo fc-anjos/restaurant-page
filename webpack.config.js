@@ -7,10 +7,13 @@ module.exports = env => {
   const minimize = !isDev; // we only minimise in production env
 
   return {
-    mode: isDev ? 'development' : 'production',
-
     entry: './src/index.js',
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      publicPath: 'assets/',
+    },
 
+    mode: isDev ? 'development' : 'production',
     devtool: sourceMap ? 'source-map' : false,
 
     module: {
@@ -19,7 +22,15 @@ module.exports = env => {
           test: /\.css$/,
           use: [
             MiniCssExtractPlugin.loader,
-            'css-loader',
+
+            {
+              loader: 'css-loader', // 2
+              options: {
+                modules: {
+                  localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                },
+              },
+            },
           ],
         },
         {
@@ -33,7 +44,7 @@ module.exports = env => {
                 import: false,
                 modules: true,
                 camelCase: true,
-                localIdentName: isDev ? '[local]' : '[sha1:hash:hex:4]',
+                localIdentName: '[path][name]__[local]--[hash:base64:5]',
               },
             },
             'sass-loader', // 3
