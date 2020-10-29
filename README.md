@@ -6,7 +6,7 @@
 ![index screenshot](docs/screenshot.png)
 
 ### Check it online!
-[Live preview]()
+[Live preview](https://rawcdn.githack.com/fc-anjos/restaurant-page/503fd7744b30e89337faa7b6832e302d874b4cae/dist/index.html)
 
 ## Built With
 - Javascript
