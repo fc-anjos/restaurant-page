@@ -16,25 +16,25 @@ const genContactTags = props => {
   return `
   <h2>Contact</h2>
   <div class="${styles.contactContainer}">
-    <span>${contactInfo.sentence}</span>
+    <span>${sentence}</span>
     <div class="${styles.infoTitle}">
       Address:
     </div>
     <div>
-      ${props.address}
-      ${props.number}
+      ${address}
+      ${number}
     </div>
     <div>
       <div class="${styles.infoTitle}">
         Telephone:
       </div>
-      ${props.telephone}
+      ${telephone}
     </div>
     <div>
       <div class="${styles.infoTitle}">
         E-mail:
       </div>
-      ${props.email}
+      ${email}
     </div>
     <div>
       <div class="${styles.infoTitle}">

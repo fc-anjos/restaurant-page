@@ -1,5 +1,5 @@
 import styles from '../styles/about.modules.css';
-import { lorem, randomFromInterval } from '../utils/utils';
+import { lorem } from '../utils/utils';
 
 const aboutInfo = {
   question: lorem.generateSentences(2).replace(/\.$/, ''),

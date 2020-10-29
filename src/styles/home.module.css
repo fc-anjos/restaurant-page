@@ -5,7 +5,7 @@
   padding: 1em;
 }
 
-.animationContainer{
+.animationContainer {
   display: flex;
   width: 100%;
 }
@@ -24,8 +24,8 @@
   height: 100%;
 }
 
-@keyframes slide-image{
-  to {flex-basis: 50%;}
+@keyframes slide-image {
+  to { flex-basis: 50%; }
 }
 
 .topRow {
@@ -48,9 +48,9 @@
   font-weight: bold;
 }
 
-@keyframes show-tabs-list{
+@keyframes show-tabs-list {
   to {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
@@ -62,9 +62,9 @@
   animation-fill-mode: forwards;
 }
 
-@keyframes show-title{
+@keyframes show-title {
   to {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
@@ -73,11 +73,7 @@
   bottom: 0.5em;
   left: 0.5em;
   color: white;
-  font-size:0.7em;
-}
-
-.credits {
-  display: block;
+  font-size: 0.7em;
 }
 
 .credits a {
@@ -88,4 +84,3 @@
 .credits a:hover {
   text-decoration: underline;
 }
-

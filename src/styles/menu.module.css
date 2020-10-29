@@ -11,7 +11,7 @@
   justify-content: space-between;
 }
 
-.connectingLine{
+.connectingLine {
   flex-grow: 1;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   position: relative;
@@ -29,7 +29,7 @@
   margin-bottom: 1em;
 }
 
-.price{
+.price {
   font-size: 1.1em;
 }
 
@@ -50,7 +50,6 @@
     flex: 50% 0 0;
     padding-right: 2em;
   }
-
 }
 
 @media (max-width: 992px) {
