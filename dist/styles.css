@@ -1,0 +1,55 @@
+._36tsDakbI-e5j0HYS3hUF1 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50%;
+}
+
+._3KwQtx4X1-A9yX0RkwZLvB{
+  display: flex;
+  width: 100%;
+}
+
+._35Vhz1U6SoIt7QsjK0eZ6B {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  animation-name: _3unguKx0zEEDaJYz9il231;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes _3unguKx0zEEDaJYz9il231{
+  to {flex-basis: 50%;}
+}
+
+.JflXTlcK9CrRkX8Vmt2ZC {
+  opacity: 0;
+  animation-name: _1fsLT329GGUBAOeZGnTiW_;
+  animation-delay: 2.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  display: flex;
+  justify-content: space-around;
+}
+
+@keyframes _1fsLT329GGUBAOeZGnTiW_{
+  to {
+    opacity: 100%;
+  }
+}
+
+.ygEkcKuqoMciBfXMlaknu {
+  opacity: 0;
+  animation-name: _32HwODEECjhDzfS4U3unvW;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes _32HwODEECjhDzfS4U3unvW{
+  to {
+    opacity: 100%;
+  }
+}
+
