@@ -4,7 +4,7 @@ const drawCredits = parentNode => {
   const creditsContainer = document.createElement('div');
   creditsContainer.className = styles.credits;
   const link = document.createElement('a');
-  link.targe = '_blank';
+  link.target = '_blank';
   link.href = 'https://unsplash.com/photos/yhn4okt6ci0';
   link.textContent = 'Commissary restaraunt by @kayleighharrington';
   const span = document.createElement('span');
