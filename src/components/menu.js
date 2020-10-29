@@ -1,23 +1,10 @@
 import styles from '../styles/menu.module.css';
-import { LoremIpsum } from '../../node_modules/lorem-ipsum';
-
-const randomFromInterval = (min, max) => Math.floor(Math.random() * (max - min + 1 + min));
-
-const lorem = new LoremIpsum({
-  sentencesPerParagraph: {
-    max: 8,
-    min: 4,
-  },
-  wordsPerSentence: {
-    max: 5,
-    min: 2,
-  },
-});
+import { lorem, randomFromInterval } from '../utils/utils';
 
 const genMenuEntry = () => {
   const menuEntry = {
     item: lorem.generateSentences(1),
-    description: lorem.generateSentences(3),
+    description: lorem.generateSentences(2).split('.').join(', ') + lorem.generateSentences(1).toLowerCase(),
     price: randomFromInterval(5, 80),
   };
   return menuEntry;
@@ -45,7 +32,7 @@ const MenuItemTag = menuItem => {
         ${price}$
       </span>
     </div>
-  <span>
+  <span class="${styles.description}">
     ${description}
   </span>
 </div>

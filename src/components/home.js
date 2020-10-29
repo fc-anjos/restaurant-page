@@ -1,10 +1,14 @@
 import styles from '../styles/home.module.css';
 
 const LeftSide = () => `
-  <div
-  class="${styles.animatedImg}"
-  >
+  <div class="${styles.animatedImg}">
   </div>
+  <div class="${styles.credits}">
+    <a class="d-block" href="https://unsplash.com/photos/yhn4okt6ci0">
+    Commissary restaraunt by @kayleighharrington
+    </a>
+    <span class="d-block">This is not an official website</span>
+</div>
 `;
 
 const Tab = props => {
