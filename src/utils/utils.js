@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { LoremIpsum } from 'lorem-ipsum';
 
 const lorem = new LoremIpsum({
