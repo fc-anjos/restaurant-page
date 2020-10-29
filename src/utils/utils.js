@@ -1,4 +1,4 @@
-import { LoremIpsum } from '../../node_modules/lorem-ipsum';
+import { LoremIpsum } from 'lorem-ipsum';
 
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {
